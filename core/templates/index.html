@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'static/img/logoeject.png' %}"/>
+    <title>SGAV</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="login_page">
+        <header class="nav_login">
+            <div class="nav-logo">
+                <img class="nav-logo-logo" src="{% static 'static/img/logoeject.png' %}" alt="Logo SGAV">
+            </div>
+            <a href=><button>Login</button></a>
+        </header>
+
+        <main class="content_main">
+            <div class="cotent_main-login">
+                {% include '_alertas.html' %}
+                <form class="content" action="" method="POST"> {% csrf_token %}
+                    <div class="cotent_main-login-title">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="login-name">
+                        <label class="login-label">E-mail</label></br>
+                        <input class="login-box" type="email" name="email">
+                    </div>
+
+                    <div class="login-password">
+                        <label class="login-label">Senha</label><br>
+                        <input class="login-box" type="password" name="senha">
+                    </div>
+
+                    <div class="forgot">
+                        <a href="">Esqueci minha senha</a>
+                    </div>
+
+                    <div class="login-checkbox">
+                        <label class="checkbox">
+                            <input class="checkbox-box" type="checkbox" id="checkbox-box" name="remember_me"> Mantenha-me conectado
+                        </label>
+                    </div>
+
+                    <div class="button-login">
+                        <button class="grow" type="submit">ENTRAR</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>
