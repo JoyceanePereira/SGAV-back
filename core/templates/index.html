@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <body>
+        <div class="container_login">
+            <div class="row main-content">
+                <div class="login_form">
+                    <h3 class="sigla">SGAV</h3>
+                    <div class="container_form">
+                        <form class="login" method="post" name="form" onsubmit="return validação()">
+                            <label for="email">Login:</label>
+                            <input type="email" name="email" id="email" placeholder="E-mail Institucional"> {% csrf_token %}
+                            <p id="erro_email_login">Por favor digite seu e-mail institucional</p>
+                            <label for="password">Senha:</label>
+                            <input type="password" nome="password" id="password" placeholder="Senha">
+                            <p id="erro_senha_login">Por favor digite sua senha</p>
+                            <input type="submit" value="Entrar">
+                        </form>
+                    </div>
+                </div>
+                <div class="container_titulo">
+                    <h1 class="titulo_principal">Sistema de<br>Gerenciamento e<br>Acompanhamento<br>Virtual</h1>
+                    <h4 class="rodape">Create by EJECT</h4>
+                </div>
+            </div>
+        </div>
+        <script src="js/login.js"></script>
+    </body>
+</html>
+{% endblock %}

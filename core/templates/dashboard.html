@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="container_menu">
+              <img class="logo" src="../img/logo.svg" alt="logo">
+              <nav class="option">
+                <a href="#"><img src="../img/menu1.svg" alt=" "></a>
+                <a href="#"><img src="../img/menu2.svg" alt="Rank"></a>
+                <a href="#"><img src="../img/menu3.svg" alt="Indicações"></a>
+                <a href="#"><img src="../img/menu4.svg" alt="Rank"></a>
+              </nav>
+          </div>
+      
+        <div class="Centro">
+            <div class="container">
+              <div class="row">
+                <div class="container_titulo">
+                  <h3 class="titulo-principal">SGAV</h3>
+                </div>
+                <div id="divBusca">
+                  <input type="text" id="txtBusca" placeholder="Pesquise por nome"/>
+                  <img src="../img/Vector.png" id="btnBusca" alt="Buscar"/>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card_body">
+                      <h2 class="card_titulo">Fulano da Silva</h2>
+                      <p>Cargo|1º</p>
+                      <div class="conteudo">
+                        <ul>
+                          <li>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                          </li>
+                          <li>
+                            <p>Nibn at agestas elementun id ipsum.</p>
+                          </li>
+                          <li>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#">Veja mais</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card_body">
+                      <h2 class="card_titulo">Fulano da Silva</h2>
+                      <p>Cargo|1º</p>
+                      <div class="conteudo">
+                        <ul>
+                          <li>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                          </li>
+                          <li>
+                            <p>Nibn at agestas elementun id ipsum.</p>
+                          </li>
+                          <li>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#">Veja mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'assets/img/logo.svg' %}" />
+    <title>Visit Iguassu | ERROR</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/error.css' %}">    
+</head>
+<body>
+    <div class="error">
+        <div class="error-caixa">
+            <div class="error-titulo">
+                <h1>ERROR 404</h1>
+            </div>
+            <div class="error-dialogo">
+                <h2>Página não encontrada</h2>
+                <p>A página que você tentou acessar está indisponivél ou não existe.</p>
+
+                <div class="error-botoes">
+                    <div class="error-botao">
+                        <a  href="">Tentar novamente</a>
+                    </div>
+                    <div class="error-botao2">
+                        <a  href="{% url 'login' %}">Págian Inicial</a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>    
+</body>
+</html>
