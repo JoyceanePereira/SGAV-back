@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-<<<<<<< HEAD
 from django.conf import settings
 
 
@@ -19,8 +18,4 @@ class Perfil(models.Model):
 
     def __str__(self):
         return self.nome
-=======
-#class Login(models.Model):
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
->>>>>>> bcbc6c0f90a7058cc511579e7829f8a0fb4899da
 

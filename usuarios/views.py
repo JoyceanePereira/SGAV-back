@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from audioop import reverse
 from contextlib import redirect_stderr
 from pyexpat.errors import messages
@@ -13,18 +12,23 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 import datetime
-=======
-from django.shortcuts import render
->>>>>>> bcbc6c0f90a7058cc511579e7829f8a0fb4899da
 
 # Create your views here.
 
 def home (request):
     return render (request, 'index.html')
 
+def perfil (request):
+    return render (request, 'perfil.html')
+
 def dashboard (request):
-<<<<<<< HEAD
     return render (request, 'dashboard.html')
+
+def card (request):
+    return render (request, 'card.html')
+
+def cardpessoal (request):
+    return render (request, 'card-pessoal.html')
 
 def login(request):
     '''Realiza login no sistema'''
@@ -62,6 +66,3 @@ def login(request):
 
 
 
-=======
-    return render (request, 'dashboard.html')
->>>>>>> bcbc6c0f90a7058cc511579e7829f8a0fb4899da
