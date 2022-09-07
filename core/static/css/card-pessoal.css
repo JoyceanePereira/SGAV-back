@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Montserrat';
+    font-style: normal;
+    background-color: #FCFCFC;
+}
+
+.card_pessoal{
+    display: flex;
+    margin-top: 3vh;
+    background-color: #C2CBD9;
+}
+
+.busca_addtarefa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3vh;
+}
+
+.busca_addtarefa button{
+    width: 181px;
+    height: 55px;
+    margin-top: 3vh;
+    border: none;
+    border-radius: 15px;
+    background: #FFC53D;
+    font-size: 18px;
+    font-weight: 500;
+    transition: transform 100ms;
+}
+
+.busca_addtarefa button:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.card_pessoal_busca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 428px;
+    height: 55px;
+    border-radius: 20px;
+    margin-top: 3vh;
+    transition: transform 200ms;
+    background-color: #C2CBD9;
+}
