@@ -1,27 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body{
-    font-family: 'Montserrat';
-    font-style: normal;
-    background-color: #efefef;
-}
-.container{
-    display: flex;
-}
 /*CONTEUDO*/
-.container_conteudo{
-    width: 100%;
-}
 .nome_usuario{
     display: flex;
     margin-top: 3vh;
     background-color: #FFC53D;
 }
 
-.img{
+.img_usuario{
     display: flex;
     align-items: center;
     margin-left: 5vh;

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/index.css' %}">
         <title>SGAV</title>
     </head>
+
     <body>
         <div class="container_login">
             <div class="row main-content">
@@ -16,7 +17,7 @@
                     <div class="container_form">
                         <form class="login" method="post" name="form" onsubmit="return validação()">
                             <label for="email">Login:</label>
-                            <input type="email" name="email" id="email" placeholder="Insira se e-mail institucional"> {% csrf_token %}
+                            <input type="email" name="email" id="email" placeholder="Insira seu e-mail institucional">{% csrf_token %}
                             <p id="erro_email_login">Por favor digite seu e-mail institucional</p>
                             <label for="password">Senha:</label>
                             <input type="password" nome="password" id="password" placeholder="Insira sua senha">

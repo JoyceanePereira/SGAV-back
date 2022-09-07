@@ -1,16 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body{
-    font-family: 'Montserrat';
-    font-style: normal;
-    background-color: #efefef;
-}
 .container{
     display: flex;
+    background-color: #efefef;
 }
 
 /*MENU*/
@@ -18,7 +8,7 @@ html, body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 20%;
+    max-width: 20%;
     height: 100vh;
     background-color: #3F739C;
     border-bottom-right-radius: 10vh;
@@ -39,7 +29,9 @@ html, body{
 }
 
 .menu img{
-    padding: 2vh;
+    margin-left: 4vh;
+    margin-top: 2vh;
+    margin-right: 4vh;
 }
 
 a:hover {

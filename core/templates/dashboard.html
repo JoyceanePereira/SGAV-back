@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
         <title>SGAV</title>
     </head>
 
@@ -15,10 +15,10 @@
         <header class="container_menu">
           <img class="logo" src="{% static 'img/logo.svg' %}" alt="logo">
           <nav class="menu">
-            <a href="#"><img src="{% static 'img/menu1.svg' %}" alt=" "></a>
+            <a href="dashboard"><img src="{% static 'img/menu1.svg' %}" alt=" "></a>
             <a href="#"><img src="{% static 'img/menu2.svg' %}" alt="Rank"></a>
             <a href="#"><img src="{% static 'img/menu3.svg' %}" alt="Indicações"></a>
-            <a href="#"><img src="{% static 'img/menu4.svg' %}" alt="Perfil"></a>
+            <a href="perfil"><img src="{% static 'img/menu4.svg' %}" alt="Perfil"></a>
           </nav>
         </header>
         <!--CENTRO-->
@@ -87,7 +87,7 @@
                 <p>100</p>
                 <img class="pt" src="{% static 'img/estrela.svg' %}" alt="">
                 <p>14</p>
-                <img class="pt" src=".{% static 'img/fogurte.svg' %}" alt="">
+                <img class="pt" src="{% static 'img/fogurte.svg' %}" alt="">
               </div>
               <div class="lista">
                 <ul>

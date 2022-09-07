@@ -1,4 +1,5 @@
 {% load static %}
+<!doctype html>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -7,16 +8,17 @@
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
         <title>SGAV</title>
     </head>
+
     <body>
         <div class="container">
             <!--MENU-->
             <header class="container_menu">
                 <img class="logo" src="{% static 'img/logo.svg' %}" alt="logo">
                 <nav class="menu">
-                    <a href="#"><img src="{% static 'img/menu1.svg' %}" alt=" "></a>
+                    <a href="dashboard.html"><img src="../img/menu1.svg' %}" alt=" "></a>
                     <a href="#"><img src="{% static 'img/menu2.svg' %}" alt="Rank"></a>
                     <a href="#"><img src="{% static 'img/menu3.svg' %}" alt="Indicações"></a>
-                    <a href="#"><img src="{% static 'img/menu4.svg' %}" alt="Perfil"></a>
+                    <a href="p"><img src="{% static 'img/menu4.svg' %}" alt="Perfil"></a>
                 </nav>
             </header>
             <!--CENTRO-->
@@ -27,7 +29,7 @@
                 </div>
                 <!--NOME DO USUÁRIO-->
                 <div class="nome_usuario">
-                    <div class="img">
+                    <div class="img_usuario">
                         <a href="dashboard"><img src="{% static 'img/seta.svg' %}" alt=""></a>
                         <img class="imgperfil" src="{% static 'img/perfil.svg' %}" alt="">
                     </div>
