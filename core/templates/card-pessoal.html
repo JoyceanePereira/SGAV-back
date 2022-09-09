@@ -1,0 +1,197 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="icon" href="{% static 'img/logo.svg' %}">
+        <title>SGAV</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!--MENU-->
+            <header class="container_menu">
+                <img class="logo" src="{% static 'img/logo.svg' %}" alt="logo">
+                <nav class="menu">
+                    <a href="dashboard"><img src="{% static 'img/menu1.svg' %}" alt=" "></a>
+                    <a href="#"><img src="{% static 'img/menu2.svg' %}" alt="Rank"></a>
+                    <a href="#"><img src="{% static 'img/menu3.svg' %}" alt="Indicações"></a>
+                    <a href="perfil"><img src="{% static 'img/menu4.svg' %}" alt="Perfil"></a>
+                </nav>
+            </header>
+            <!--CENTRO-->
+            <div class="container_conteudo">
+                <!--TITULO-->
+                <div class="titulo">
+                <h3 class="sigla">SGAV</h3>
+                </div>
+                <!--NOME DO USUÁRIO-->
+                <div class="card_pessoal">
+                    <div class="img_usuario">
+                        <a href="dashboard"><img src="{% static 'img/seta.svg' %}" alt=""></a>
+                        <img class="imgperfil" src="{% static 'img/perfil.svg' %}" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>{{ perfil.nome }}</h2>
+                        <span>{{ perfil.cargo }} | {{ perfil.colocacao }} | {{ perfil.tempo_empresa }}</span>
+                        <div class="info_pontos">
+                            <p>100</p>
+                            <img class="info_pt" src="{% static 'img/estrela.svg' %}" alt="">
+                            <p>14</p>
+                            <img class="info_t" src="{% static 'img/fogurte.svg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                                <!--BUSCA E PRA CIMA-->
+                <div class="busca_addtarefa">
+                    <button onclick="onAdd()">Adicionar Tarefas</button>
+                    <div id="confirmation" class="modal-container">
+                        <div class="modal">
+                            <section class="modal-conteudo">
+                                <header class="modal-header">
+                                    <span onclick="onCancel()">&times;</span>
+                                    <h1 class="titulo-modal">Adicionar Tarefa</h1>
+                                </header>
+                            <form class="modal-form" method='POST'>
+                                <section class="model-content">
+                                        {% csrf_token %}
+                                        <label for="titulo-modal">Atividade:</label>
+                                        <input type="text" name="tarefa" id="att">
+                                        <label for="titulo-modal">Descrição:</label>
+                                        <input type="text" name="tarefa" id="att">
+                                        <label for="titulo-modal">Data prevista para entrega:</label>
+                                        <input type="date" name="tarefa" id="att">
+
+                                </section>
+                                <footer class="modal-footer">
+                                    <button type="submit" class="modal-button" onclick="onConfirm()">Adicionar</button>
+                                </footer>
+                            </form>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="card_pessoal_busca">
+                        <input type="text" class="text_busca" placeholder="Pesquise por nome">
+                        <a href="#" class="lupa"><img src="{% static 'img/lupa.svg' %}"  alt="Buscar"/></a>
+                    </div>   
+                </div>
+                <!--INFORMAÇÕES SEMANAIS-->
+                <div class="paragrafo_card">
+                    <div class="texto_paragrafo">
+                        <div class="texto">
+                            <p>XX/XX - XX/XX</p>
+                            <ul>
+                                {% for t in tarefas %}
+                                <li>
+                                    <p>{{ t.tarefa }}</p>
+                                </li>
+                                {% endfor %}
+                                <li>
+                                    <p>Nibh at egestas elementum id ipsum.</p>
+                                </li>
+                                <li>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-lixeira">
+                        <button onclick="onExcluir()"><img src="{% static 'img/lixeira.svg' %}"/></button>
+                        <div id="excluir" class="modal-container-lixeira">
+                            <div class="modal-lixeira">
+                                <section class="modal-conteudo-lixeira">
+                                    <header class="modal-header-lixeira">
+                                        <span onclick="onExit()">&times;</span>
+                                        <h1 class="titulo-modal-lixeira">Excluir Lorem Span</h1>
+                                    </header>
+                                    <section class="modal-content-lixeira">
+                                        <p>A exclusão de uma checklist é permanente e não é possível recuperá-la.</p>
+                                    </section>
+                                    <footer class="modal-footer-lixeira">
+                                        <button type="button" class="modal-button-lixeira" onclick="onConfirmar()">Excluir Check-List</button>
+                                    </footer>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="paragrafo_card">
+                    <div class="texto_paragrafo">
+                        <div class="texto">
+                            <p>XX/XX - XX/XX</p>
+                            <ul>
+                                <li>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                </li>
+                                <li>
+                                    <p>Nibh at egestas elementum id ipsum.</p>
+                                </li>
+                                <li>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-lixeira">
+                        <button onclick="onExcluir()"><img src="{% static 'img/lixeira.svg' %}"/></button>
+                        <div id="excluir" class="modal-container-lixeira">
+                            <div class="modal-lixeira">
+                                <section class="modal-conteudo-lixeira">
+                                    <header class="modal-header-lixeira">
+                                        <span onclick="onExit()">&times;</span>
+                                        <h1 class="titulo-modal-lixeira">Excluir Lorem Span</h1>
+                                    </header>
+                                    <section class="model-content-lixeira">
+                                        <p>A exclusão de uma checklist é <br> permanente e não é possível <br> recuperá-la.</p>
+                                    </section>
+                                    <footer class="modal-footer-lixeira">
+                                        <button type="button" class="modal-button-lixeira" onclick="onConfirmar()">Excluir Check-List</button>
+                                    </footer>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <!--PRA CIMA-->
+        <div class="container_pracima">
+            <div class="pc_titulo">
+                <div class="pc_icon">
+                <img src="{% static 'img/PraCimaAzul.svg' %}" alt="">
+                </div>
+                <h4 class="pc_nome">Pra Cima</h4>
+            </div>
+            <!--PERFIL DOS PRA CIMA-->
+            <div class="pc_perfil">
+                <!--PERFIL 1-->
+                <div class="pc_pessoa">
+                    <div class="pc_icon">
+                    <img src="{% static 'img/perfilBlack.svg' %}" alt="Perfil">
+                    </div>
+                    <h4>Fulano Rodigues <span class="pc_font">um<span class="pc_color"> Pra cima</span> por concluir Lorem ipsum dolor sit amet.</span></h4>
+                </div>
+                <!--PERFIL 2-->
+                <div class="pc_pessoa">
+                    <div class="pc_icon">
+                    <img src="{% static 'img/perfilBlack.svg' %}" alt="Perfil">
+                    </div>
+                    <h4>Fulano Rodigues <span class="pc_font">um<span class="pc_color"> Pra cima</span> por concluir Lorem ipsum dolor sit amet.</span></h4>
+                </div>
+                <!--PERFIL 3-->
+                <div class="pc_pessoa">
+                    <div class="pc_icon">
+                    <img src="{% static 'img/perfilBlack.svg' %}" alt="Perfil">
+                    </div>
+                    <h4>Fulano Rodigues <span class="pc_font">um<span class="pc_color"> Pra cima</span> por concluir Lorem ipsum dolor sit amet.</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="static/js/modal-card.js"></script>
+</html>
