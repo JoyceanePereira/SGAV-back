@@ -24,5 +24,5 @@ class Perfil(models.Model):
 class Tarefas(models.Model):
     tarefa = models.TextField()
     user = models.ForeignKey(Perfil, on_delete=models.CASCADE)
-    
+
 
