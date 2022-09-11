@@ -12,15 +12,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f42gikr@g)_ar1ptj_keyt_y)bhjt4qzvcd^ce!wxt+miu5buq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.pythonanywhere.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'dashboard',
     'usuarios',
     'django.contrib.admin',
     'django.contrib.auth',
