@@ -9,6 +9,7 @@ class Perfil(models.Model):
     colocacao = models.IntegerField(verbose_name='Colocação')
     tempo_empresa = models.CharField(max_length=100, verbose_name='Tempo de empresa')
     telefone = models.CharField(max_length=20, verbose_name='Telefone')
+    email = models.EmailField(verbose_name='Email')
     cargo = models.CharField(max_length=50, verbose_name='Cargo')
     foto_perfil = models.ImageField(verbose_name='Foto de Perfil', upload_to='fotos/', blank=True)
     user = models.OneToOneField(
