@@ -41,7 +41,7 @@ def cardpessoal (request):
 def login(request):
     '''Realiza login no sistema'''
     if request.user and request.user.is_authenticated:
-        return HttpResponseRedirect(reverse('dashboard'))
+        return HttpResponseRedirect(reverse('dashboard.html'))
     template_name = 'index.html'
     if request.method == 'POST':
         email = request.POST['email']
